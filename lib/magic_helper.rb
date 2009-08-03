@@ -6,18 +6,25 @@ module MagicHelper
   
   def deck_display(deck)
     order = %w{Creature Instant Sorcery Artifact Enchantment Land Planeswalker Sideboard}
-    
+    line_count = 0
     o = %q[<div class="deck">]
+    o << %q[<div class="deckblock">]
     order.each do |card_type|
       if cards = deck[card_type]
-        o << %q[<div class="deckblock #{card_type.to_lower}">]
         o << %Q[<h3>#{card_type} \[#{count_cards(cards)}\]</h3>]
+        line_count += 1
         cards.sort {|a,b| a[0]<=>b[0]}.each do |name, qty|
           o << %Q[<p>#{qty} #{link_card(name)}</p>]
+          line_count = line_count + 1
         end
+      end  
+      if line_count > 11
         o << %q[</div>]
+        o << %q[<div class="deckblock">]
+        line_count = 0
       end
-    end
+    end    
+    o << %q[</div>]
     o << %q[<div class="cardframe"><img src="/images/back.jpg" id="card" width="200" height="281" /></div>]
     o << %Q[<br style="clear:both;" /><h3 class="total">#{count_deck(deck)} cards</h3></div>]
     o

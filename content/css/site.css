@@ -67,10 +67,10 @@ p.title {
 /* Magic Decks
  * --------------------------------------------------------------------- */
 .deck {background-color:#F1F1F1; margin:1em; border: 1px solid #999;}
-.deck h3 {color: #333; font-size: .7em}
+.deck h3 {color: #333; font-size: .7em; padding-top: 1em;}
 .deck p {margin:0;}
-.deckblock {padding: 5px;float:left;}
-.deck .total {padding-left: 5px; color: #999;}
+.deckblock {padding: 1em;float:left;}
+.deck .total {padding-left: 1em; color: #999;}
 .cardframe{float:right;width:232px;height:319px;}
 .cardframe img{margin:14px 0 20px 18px;}
 /* EOF */

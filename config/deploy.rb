@@ -12,7 +12,7 @@ set :scm, "git"
 #set :scm_passphrase, "p@ssw0rd" #This is your custom users password
 set :user, "arux"
 ssh_options[:forward_agent] = true
-set :branch, "origin/master"
+set :branch, "master"
 
 
 

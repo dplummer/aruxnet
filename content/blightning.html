@@ -1,0 +1,66 @@
+---
+title:      Blightning
+created_at: 2009-07-27 11:28:34.669918 -07:00
+filter:
+  - erb
+---
+
+<h2 class="title"><%= h(@page.title) %></h2>
+
+<p>A fast RB burn deck.</p>
+<% deck = {
+  'Land' => {
+    'Mountain' => 15,
+    'Swamp' => 6,
+    'Dragonskull Summit' => 4
+  },
+  'Creature' => {
+    'Ball Lightning' => 4,
+    'Hellspark Elemental' => 4
+  },
+  'Instant' => {
+    'Lightning Bolt' => 4,
+    'Volcanic Fallout' => 4,
+    'Terminate' => 4,
+    'Magma Spray' => 2,
+    'Flame Javelin' => 4
+  },
+  'Sorcery' => {
+    'Blightning' => 4,
+    'Earthquake' => 2,
+    'Infest' => 2,
+    'Banefire' => 1
+  },
+  'Sideboard' => {
+    'Anathemancer' => 3,
+    'Thought Hemorrhage' => 2,
+    'Pithing Needle' => 2,
+    'Chaotic Backlash' => 2,
+    'Infest' => 2,
+    'Shatter' => 4
+  }
+} %>
+
+<%= deck_display(deck) %>
+
+<p>Other possible cards in the deck/sideboard:</p>
+<ul>
+  <li><%= link_card 'Goblin Outlander' %> - Pro-white, great vs Kithkin</li>
+  <li><%= link_card 'Black Knight' %> - Also pro-white, but has first strike too!</li>
+  <li><%= link_card 'Goblin Assault' %> - Keeps throwing goblins at your opponents, keeping the pressure on.</li>
+  <li><%= link_card 'Chaotic Backlash' %> - Also good vs. Kithkin, white tokens</li>
+  <li><%= link_card 'Puncture Blast' %> - Another lightning bolt, but for 2R. Has wither, and can hit player. Would rather just terminate the creature.</li>
+  <li><%= link_card 'Deathmark' %> - Take out anything prot-red</li>
+  <li><%= link_card 'Sign in Blood' %> - Draw more cards not bad, but by casting this I wouldn't be attacking my opponent, which isn't good.</li>
+  <li><%= link_card 'Bituminous Blast' %> - Kill a creature then cascade, not bad, but expensive mana.</li>
+  <li><%= link_card 'Firespout' %> - Nice choice if including the tri-color SoA land</li>
+  <li><%= link_card 'Tarfire' %> - Doesn't remove cards from the game like Magma Spray, but it can target your opponent (its Goblin Shock)</li>
+  <li><%= link_card 'Everlasting Torment' %> - Keep your opponent from gaining life? Sounds good! Too bad against decks that have lifegain they'll have enchantment hate too.</li>
+</ul>
+
+<p>Expensive cards from Lorwyn block:</p>
+<ul>
+  <li><%= link_card 'Graven Cairns' %> - Filter dual land</li>
+  <li><%= link_card 'Figure of Destiny' %> - I see this in every pro deck, guess its pretty awesome</li>
+  <li><%= link_card 'Demigod of Revenge' %> - Great because if your opponent has an answer to the first one, the second one is twice as awesome! Except if he gets Pathed, then not so great.</li>
+</ul>

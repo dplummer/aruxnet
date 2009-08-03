@@ -1,0 +1,45 @@
+---
+title:      Zombies!
+created_at: 2009-07-27 11:28:34.669918 -07:00
+filter:
+  - erb
+---
+<% 
+deck = {
+  'Land' => {
+    'Mountain' => 5,
+    'Swamp' => 10,
+    'Island' => 5,
+    'Grixis Panorama' => 1,
+    'Crumbling Necropolis' => 3,
+    'Drowned Catacomb' => 1
+  },
+  'Creature' => {
+    'Fleshbag Marauder' => 2,
+    'Gravedigger' => 2,
+    'Grixis Grimblade' => 4,
+    'Anathemancer' => 1,
+    'Deathbringer Thoctar' => 2,
+    'Lich Lord of Unx' => 2,
+    'Cemetery Reaper' => 4,
+    'Lightning Reaver' => 2,
+    'Shambling Remains' => 3,
+    'Corpse Connoisseur' => 3,
+    'Xathrid Demon' => 1
+  },
+  'Instant' => {
+    'Grixis Charm' => 1
+  },
+  'Sorcery' => {
+    'Rise from the Grave' => 4
+  },
+  'Artifact' => {
+    'Unscythe, Killer of Kings' => 2,
+    'Mask of Riddles' => 2
+  }
+}
+%>
+<h2 class="title"><%= h(@page.title) %></h2>
+
+<p>Grixis zombie deck. Since its red it should probably have 4 lightning bolts, oh well.</p>
+<%= deck_display(deck) %>

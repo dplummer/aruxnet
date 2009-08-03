@@ -1,0 +1,46 @@
+---
+title:      Esper Transmuter
+created_at: 2009-07-27 11:09:39.418528 -07:00
+filter:
+  - erb
+---
+<h2><%= h(@page.title) %></h2>
+
+
+<p><%= link_card 'Master Transmuter' %>, which lets you do some fun stuff with the big creatures. Blink the <%= link_card 'Filigree Angel' %> for lots of life gain. Blink the <%= link_card 'Master Transmuter' %> herself to keep her out of harms way. Blink a <%= link_card 'Sphinx Summoner' %> to pull another creature from your library to your hand. Put a <%= link_card 'Scourglass' %> into play at the end of your opponent's turn to sac it during your upkeep and stop your opponent.</p>
+
+<p>I came up with this list myself, but after reading <%= link_to "Transmuter Elixer", 'http://forums.mtgsalvation.com/showthread.php?t=149236' %> on <%= link_to "MTG Salvation", 'http://mtgsalvation.com' %> I will be adding more summoners and <%= link_card 'Thousand-Year Elixir' %> (to replace the <%= link_card 'Unbender Tine' %>)</p>
+
+<p>The <%= link_card 'Kaleidostone' %> is a card drawing engine, since coupled with the <%= link_card 'Esperzoa' %> or <%= link_card 'Master Transmuter' %> means I can play it every turn.</p>
+<% deck = {
+  'Land' => {
+    'Arcane Sanctum' => 2,
+    'Island' => 5,
+    'Plain' => 5,
+    'Swamp' => 5
+  },
+  'Creature' => {
+    'Ornithopter' => 1,
+    'Tidehollow Sculler' => 1,
+    'Ethersworn Canonist' => 1,
+    'Sharuum the Hegemon' => 1,
+    'Filigree Angel' => 1,
+    'Platinum Angel' => 1,
+    'Sphinx of the Steel Wind' => 1,
+    'Esperzoa' => 2,
+    'Sphinx Summoner' => 2,
+    'Ethersworn Shieldmage' => 3,
+    'Etherium Sculptor' => 4,
+    'Master Transmuter' => 4
+  },
+  'Sorcery' => {
+    'Fabricate' => 3
+  },
+  'Instant' => {
+    'Negate' => 3
+  },
+  'Planeswalker' => {
+    'Tezzeret the Seeker' => 1
+  }
+} %>
+<%= deck_display(deck) %>

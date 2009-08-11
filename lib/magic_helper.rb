@@ -11,7 +11,7 @@ module MagicHelper
     o << %q[<div class="deckblock">]
     order.each do |card_type|
       if cards = deck[card_type]
-        o << %Q[<h3>#{card_type} \[#{count_cards(cards)}\]</h3>]
+        o << %Q[<h3><span class="hidden">// </span>#{card_type} \[#{count_cards(cards)}\]</h3>]
         line_count += 1
         cards.sort {|a,b| a[0]<=>b[0]}.each do |name, qty|
           o << %Q[<p>#{qty} #{link_card(name)}</p>]

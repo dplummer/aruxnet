@@ -73,4 +73,5 @@ p.title {
 .deck .total {padding-left: 1em; color: #999;}
 .cardframe{float:right;width:232px;height:319px;}
 .cardframe img{margin:14px 0 20px 18px;}
+.hidden {display: none;}
 /* EOF */

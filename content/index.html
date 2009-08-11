@@ -3,8 +3,40 @@ title:       Donald Plummer
 created_at:  2008-08-02 14:06:40.000000 -06:00
 filter:
   - erb
-  - textile
 ---
-Currently just posting my magic decks online.
+<p>Currently just posting my magic decks online.</p>
+
+<script type="text/javascript">
+<!--
+var today=new Date()
+
+//Enter the date for your countdown. Month first then day. Example 6th month 26th day. 
+var countdown=new Date(today.getFullYear(), 10, 2)
+
+//Enter your message here! Change words below to suit
+var beforedayText="left until Lorwyn rotates out!"
+var ondaytext="Today is the day. Happy Zendikar release Day!"
+
+var monthtext=new Array("Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec")
+countdown.setMonth(countdown.getMonth()-1) //change to 0-11 month format
+var showdate="("+monthtext[countdown.getMonth()]+" "+countdown.getDate()+")" 
+
+var one_day=1000*60*60*24
+var calculatediff=""
+
+calculatediff=Math.ceil((countdown.getTime()-today.getTime())/(one_day))
+if (calculatediff<0){ 
+  var nextyeartoday=new Date()
+  nextyeartoday.setFullYear(today.getFullYear()+1)
+  calculatediff=Math.ceil((nextyeartoday.getTime()-today.getTime())/(one_day)+calculatediff)
+}
+
+var pluraldayornot=(calculatediff==1)? "day" : "days"
+if (calculatediff>0)
+	document.write("<p>"+calculatediff+" "+pluraldayornot+" "+beforedayText+" "+showdate+"!</p>")
+else if (calculatediff==0)
+	document.write("<p>"+ondaytext+" "+showdate+"!</p>")
+-->
+</script>
 
 

@@ -1,0 +1,47 @@
+---
+title:      Blightning
+created_at: 2009-07-27 11:28:34.669918 -07:00
+filter:
+  - erb
+---
+
+<h2 class="title"><%= h(@page.title) %></h2>
+
+<p>Chris' white control deck.</p>
+
+<% deck = {
+  'Land' => {
+    'Plains' => 20,
+  },
+  'Creature' => {
+    'Soul Warden' => 2,
+    'Elite Vanguard' => 2,
+    'White Knight' => 2,
+    'Sigiled Paladin' => 2,
+    'Blinding Mage' => 2,
+    'Mesa Enchantress' => 2,
+    'Guardian Seraph' => 1,
+    'Serra Angel' => 3,
+  },
+  'Instant' => {
+    'Lapse of Certainty' => 3,
+    'Silence' => 3,
+  },
+  'Sorcery' => {
+    'Planar Cleansing' => 1,
+    'Martial Coup' => 1,
+  },
+  'Enchantment' => {
+    'Indestructability' => 1,
+    'Pacifisim' => 4,
+    'Oblivion Ring' => 4,
+    'Sigil of the Empty Throne' => 1,
+    'Lifelink' => 2,
+  },
+  'Artifacts' => {
+    'Scepter of Dominance' => 1,
+    'Scourglass' => 2,
+  }
+} %>
+
+<%= deck_display(deck) %>

@@ -78,7 +78,7 @@ module MagicHelper
 
   def link_card(card_name)
     link_to card_name,
-      "http://www.magiccards.info/autocard.php?card=#{card_name}",
+      "http://store.arux.net/products/search?q=#{card_name}&ref=aruxblog",
       :title => card_name,
       :onclick => "AutoCard('#{card_name}'); return false;"
   end

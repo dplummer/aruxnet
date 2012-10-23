@@ -59,17 +59,17 @@ module MagicHelper
     end
 
     def count_cards(cards)
-      cards.sum {|card| card[1]}
+      cards.inject(0) {|sum, card| sum + card[1]}
     end
 
     def size
-      @deck_hash.sum do |grouping, cards|
-        grouping == 'Sideboard' ? 0 : count_cards(cards)
+      @deck_hash.inject(0) do |sum, (grouping, cards)|
+        grouping == 'Sideboard' ? sum : sum + count_cards(cards)
       end
     end
 
     def link_card(card_name)
-      %Q[<a href="http://www.magiccards.info/autocard.php?card=#{card_name}"
+      %Q[<a href="http://store.arux.net/products/search?q=#{card_name}&ref=2GXXSPD6"
         onclick="AutoCard('#{card_name}'); return false;"
         onmouseover="s('#{card_name.gsub(' ', '_').gsub(',', '')}');"
         title="#{card_name}">#{card_name}</a>]
@@ -78,7 +78,7 @@ module MagicHelper
 
   def link_card(card_name)
     link_to card_name,
-      "http://store.arux.net/products/search?q=#{card_name}&ref=aruxblog",
+      "http://store.arux.net/products/search?q=#{card_name}&ref=2GXXSPD6",
       :title => card_name,
       :onclick => "AutoCard('#{card_name}'); return false;"
   end
